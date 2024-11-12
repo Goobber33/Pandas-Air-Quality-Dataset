@@ -29,7 +29,7 @@ Additional columns are available in the dataset but are not used in this demo.
 
 To run this project, you’ll need Python and `pandas`. Install dependencies with:
 
-```bash
+bash
 pip install pandas
 
 ## Usage
