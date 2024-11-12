@@ -33,21 +33,18 @@ Additional columns are available in the dataset but are not used in this demo.
 
    ```bash
    python main.py
-
 ## Installation
 
 To run this project, you’ll need Python and `pandas`. Install dependencies with:
 
-pip install pandas
-
 ```bash
+pip install pandas
+```
 
 ## Example Output
-
-                                       count
-title           genres
+```bash
+title           genres                    count
 #BringBackAlice Crime, Drama, Mystery      1
 #FBF            Drama, Family              1
 #FameTime       Comedy, Romance            1
 #Luimelia       Drama, Romance, Short      1
-
