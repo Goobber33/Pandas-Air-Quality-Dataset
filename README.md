@@ -25,13 +25,6 @@ The dataset used for this project is the HBO Max Dataset from Kaggle, which incl
 
 Additional columns are available in the dataset but are not used in this demo.
 
-## Installation
-
-To run this project, you’ll need Python and `pandas`. Install dependencies with:
-
-bash
-pip install pandas
-
 ## Usage
 
 1. Clone this repository and navigate to the project directory.
@@ -40,6 +33,13 @@ pip install pandas
 
    ```bash
    python main.py
+
+## Installation
+
+To run this project, you’ll need Python and `pandas`. Install dependencies with:
+
+```bash
+pip install pandas
 
 ## Example Output
 
