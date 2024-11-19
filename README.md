@@ -70,21 +70,21 @@ The following charts are generated to provide insights:
 Line chart displaying daily average CO levels to show trends over time.
 
 
-<img src="images/aq1.png" alt="Chart 1" width="600">
+<img src="images/aq1.PNG" alt="Chart 1" width="600">
 
 
 2. Correlation Between CO and Benzene Levels
 Scatter plot highlighting the relationship between CO and Benzene concentrations.
 
 
-<img src="images/aq2.png" alt="Chart 2" width="600">
+<img src="images/aq2.PNG" alt="Chart 2" width="600">
 
 
 3. Top 5 Days with Highest Relative Humidity
 Pie chart showing the relative distribution of humidity levels for the top 5 days.
 
 
-<img src="images/aq3.png" alt="Chart 3" width="600">
+<img src="images/aq3.PNG" alt="Chart 3" width="600">
 
 ## Contact
 
