@@ -1,57 +1,94 @@
 # Pandas Dataset Demo
 
-This project demonstrates how to handle large datasets in Python using the `pandas` library. It specifically focuses on techniques for reading, processing, and aggregating large datasets in an efficient way. For this demo, we use the [Full HBO Max Dataset from Kaggle](https://www.kaggle.com/datasets) to showcase practical data handling methods.
+This project demonstrates techniques for handling, processing, and visualizing large datasets in Python using the `pandas` library. The demo uses the [Air Quality Dataset](https://archive.ics.uci.edu/ml/datasets/air+quality) to showcase practical data handling methods, focusing on environmental data analysis.
 
 ## Project Overview
 
 The main objectives of this project are to:
 - Efficiently process large datasets using chunking.
 - Perform data aggregation and summarization using `pandas`.
-- Visualize the results to provide insights into the dataset.
+- Visualize trends and insights from the data.
 
 ## Features
 
-- **Chunk Processing**: Handles large datasets by processing data in chunks, reducing memory usage.
-- **Data Aggregation**: Groups data by `title` and `genres` to count occurrences and identify trends.
+- **Chunk Processing**: Handles large datasets by processing data in chunks, ensuring efficient memory usage.
+- **Data Aggregation**: Groups data by date and calculates daily averages for:
+  - Carbon Monoxide (CO)
+  - Benzene (C6H6)
+  - Temperature (T)
+  - Relative Humidity (RH)
 - **Visualizations**:
-  - Bar chart showing the top 5 most common genres.
-  - Pie chart illustrating genre distribution.
-- **Database Storage**: Saves the aggregated results to a SQLite database for persistence.
+  - Line chart showing daily average CO levels over time.
+  - Scatter plot illustrating the correlation between CO and Benzene levels.
+  - Pie chart highlighting the top 5 days with the highest relative humidity.
+- **Database Integration**: Saves processed and aggregated results to a SQLite database (`output_data.db`) for persistence and further analysis.
 
-## Data
+## Dataset
 
-The dataset used for this project is the HBO Max Dataset from Kaggle, which includes details about HBO Max's content catalog, such as:
-- Titles
-- Genres
-- Release years
-- Ratings
+The dataset used for this project is the Air Quality Dataset, which includes hourly sensor readings for atmospheric variables. **Key columns used in this project**:
+- `Date`
+- `Time`
+- `CO(GT)` (Carbon Monoxide concentration)
+- `C6H6(GT)` (Benzene concentration)
+- `T` (Temperature in Celsius)
+- `RH` (Relative Humidity in %)
 
-**Columns Used in This Project**:
-- `title`
-- `genres`
+## Prerequisites
 
-Additional columns are available but are not utilized in this demo.
+To run this project, ensure you have Python installed along with the required libraries. Install dependencies using:
+
+```bash
+pip install pandas sqlite3 matplotlib
+```
 
 ## Usage
 
 1. Clone this repository and navigate to the project directory.
-2. Place the `data.csv` file (HBO Max Dataset) in the project folder.
+2. Ensure the processed_air_quality.csv file is in the project folder.
 3. Run the Python script:
+```bash 
+python main.py
+ ```
 
-   ```bash
-   python main.py
-## Installation
+ # Outputs
 
-To run this project, you’ll need Python and `pandas`. Install dependencies with:
+ ## Database Output
 
-```bash
-pip install pandas
-```
+ Aggregated results are saved to the SQLite database `output_data.db`, under the table `air_quality_summary`. This table contains:
 
-## Example Output
-```bash
-title           genres                    count
-#BringBackAlice Crime, Drama, Mystery      1
-#FBF            Drama, Family              1
-#FameTime       Comedy, Romance            1
-#Luimelia       Drama, Romance, Short      1
+* `Date`: The date of measurement.
+* `Avg_CO_GT`: Average Carbon Monoxide concentration.
+* `Avg_C6H6_GT`: Average Benzene concentration.
+* `Avg_Temperature`: Average temperature.
+* `Avg_Relative_Humidity`: Average relative humidity.
+
+## Visualizations
+
+The following charts are generated to provide insights:
+
+1. Average CO Levels Over Time
+Line chart displaying daily average CO levels to show trends over time.
+
+
+<img src="images/aq1.png" alt="Chart 1" width="600">
+
+
+2. Correlation Between CO and Benzene Levels
+Scatter plot highlighting the relationship between CO and Benzene concentrations.
+
+
+<img src="images/aq2.png" alt="Chart 2" width="600">
+
+
+3. Top 5 Days with Highest Relative Humidity
+Pie chart showing the relative distribution of humidity levels for the top 5 days.
+
+
+<img src="images/aq3.png" alt="Chart 3" width="600">
+
+## Contact
+
+For questions or feedback, please reach out at [kcparks1234@gmail.com].
+
+
+
